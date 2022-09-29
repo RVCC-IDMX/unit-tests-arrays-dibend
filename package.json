@@ -8,7 +8,7 @@
     "test:2": "vitest tests/arrays-02.test.js --globals --coverage --run --reporter verbose",
     "test:3": "vitest tests/arrays-03.test.js --globals --coverage --run --reporter verbose",
     "test:4": "vitest tests/arrays-04.test.js --globals --coverage --run --reporter verbose",
-    "test": "cd tests & vitest --coverage --run arrays-01.test.js arrays-02.test.js arrays-03.test.js arrays-04.test.js --silent --globals "
+    "test": "vitest --coverage --run tests/arrays-01.test.js tests/arrays-02.test.js tests/arrays-03.test.js tests/arrays-04.test.js --silent --globals "
   },
   "repository": {
     "type": "git",
