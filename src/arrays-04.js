@@ -16,7 +16,11 @@
  * ? hint: use Math.abs() to get the absolute value of a number
  */
 function getAbsoluteSum(nums) {
-  // write your code here & return value
+  let sum = 0;
+  for (let i = 0; i < nums.length; i += 1) {
+    sum += Math.abs(nums[i]);
+  }
+  return sum;
 }
 
 /**
@@ -27,7 +31,7 @@ function getAbsoluteSum(nums) {
  * ? hint: use the filter() array method - https://youtu.be/JY5HUDMudew
  */
 function removeStrings(arr) {
-  // write your code here & return value
+  return arr.filter((element) => typeof element !== 'string');
 }
 
 /**
@@ -49,7 +53,10 @@ function removeStrings(arr) {
  * ? hint 2: use the spread operator with Math.min() and Math.max()
  */
 function findMinMax(arr) {
-  // write your code here & return value
+  const minMax = [];
+  minMax[0] = Math.min(...arr);
+  minMax[1] = Math.max(...arr);
+  return minMax;
 }
 
 /**
@@ -73,7 +80,11 @@ function findMinMax(arr) {
  * ? https://bit.ly/39ASLc0
  */
 function getTelNo(numbers) {
-  // write your code here & return value
+  const phone = [...numbers];
+  phone.splice(0, 0, '(');
+  phone.splice(4, 0, ') ');
+  phone.splice(8, 0, '-');
+  return phone.join('');
 }
 
 module.exports = {
